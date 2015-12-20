@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="webrequest_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,71 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iw8-eu-foH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.046842671820000001" blue="0.13778931129999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etK-jv-sRp">
+                                <rect key="frame" x="26" y="558" width="35" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="3dL-xa-hMH"/>
+                                    <constraint firstAttribute="height" constant="30" id="XPB-en-tD4"/>
+                                </constraints>
+                                <state key="normal" title="Swift"/>
+                                <connections>
+                                    <action selector="loadSwift:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FSM-Pu-7G6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwc-XK-2eI">
+                                <rect key="frame" x="538" y="558" width="39" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GYZ-UK-4lG"/>
+                                    <constraint firstAttribute="width" constant="39" id="bdu-5t-AsW"/>
+                                </constraints>
+                                <state key="normal" title="Steak"/>
+                                <connections>
+                                    <action selector="loadSteak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l8c-Jg-QMc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfx-cY-vQL">
+                                <rect key="frame" x="244" y="558" width="113" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="3E4-Mo-NFR"/>
+                                    <constraint firstAttribute="height" constant="30" id="YwS-tJ-fkd"/>
+                                </constraints>
+                                <state key="normal" title="Celebrity Gossip"/>
+                                <connections>
+                                    <action selector="loadGossip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7JL-8V-lHW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iw8-eu-foH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Ab-Mp-jq1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uwc-XK-2eI" secondAttribute="bottom" constant="12" id="2VM-zV-wXj"/>
+                            <constraint firstItem="zfx-cY-vQL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hmu-0o-aCy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zfx-cY-vQL" secondAttribute="bottom" constant="12" id="M0p-8b-6Bx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uwc-XK-2eI" secondAttribute="trailing" constant="3" id="R03-PP-ppg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="etK-jv-sRp" secondAttribute="bottom" constant="12" id="bkW-AC-KkG"/>
+                            <constraint firstItem="iw8-eu-foH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gU5-zb-1J4"/>
+                            <constraint firstAttribute="trailing" secondItem="iw8-eu-foH" secondAttribute="trailing" id="ixY-Ht-OTM"/>
+                            <constraint firstItem="etK-jv-sRp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="mI2-ku-3UW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iw8-eu-foH" secondAttribute="bottom" constant="50" id="xXx-Ns-nUX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="container" destination="iw8-eu-foH" id="Rul-H2-YSV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="440" y="387"/>
         </scene>
     </scenes>
 </document>
